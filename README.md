@@ -48,6 +48,7 @@ Neither file works alone. Install both.
 | `snore_bcd` | Baby villager cooldown |
 | `snore_init` | Deferred announce flag (fires on first join) |
 | `snore_sleep` | Player SleepTimer mirror |
+| `snore_pick` | Rolls 1-8 to select which sound plays next |
 
 ### Key foundation design decisions
 - `scoreboard objectives remove` BEFORE `add` → safe on every `/reload`
@@ -113,7 +114,7 @@ Source: [Minecraft Wiki Pack Formats](https://minecraft.wiki/w/Pack_format)
 - Whether you're using global or world-specific datapack
 - Screenshot or paste of chat after `/reload`
 - Output of `/function snore:util/test`
-- Any JVM args you have (especially `-XX:+UseCompactObjectHeaders` — **remove this, it crashes in some Intel iGPUs like mine**)
+- Any JVM args you have (especially `-XX:+UseCompactObjectHeaders` — **that causes some instability sometimes on Java 25**)
 - Any other resource packs or datapacks installed
 - And many more whatsoever
 
